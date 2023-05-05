@@ -8,9 +8,15 @@ function Header() {
       <img src={Logo} className="h-16 w-16" alt="Logo" />
 
       <div className="flex items-center gap-10">
-        <button className="text-md font-poppins font-medium">Produtos</button>
-        <button className="text-md font-poppins font-medium">Sobre Nós</button>
-        <button className="text-md font-poppins font-medium">Benefícios</button>
+        <a href="#products" className="text-md font-poppins font-medium">
+          Produtos
+        </a>
+        <a href="#aboutUs" className="text-md font-poppins font-medium">
+          Sobre Nós
+        </a>
+        <a href="#benefits" className="text-md font-poppins font-medium">
+          Benefícios
+        </a>
         <ButtonTalkToUs />
       </div>
     </div>

@@ -20,6 +20,10 @@
   border-radius: 8px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
