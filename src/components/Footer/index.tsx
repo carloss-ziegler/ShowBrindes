@@ -9,9 +9,14 @@ function Footer() {
       <img src={Logo} className="h-20 w-20" alt="" />
 
       <div className="text-center">
-        <p className="text-white font-medium font-poppins text-lg">
+        <button
+          onClick={() =>
+            (window.location.href = "mailto:chziegler445@gmail.com")
+          }
+          className="text-white font-medium font-poppins text-lg"
+        >
           contato@showsbrindes.com
-        </p>
+        </button>
         <p className="text-white font-medium font-poppins text-lg">
           &copy; 2023 Show Brindes. Todos os direitos reservados.
         </p>
@@ -21,8 +26,14 @@ function Footer() {
         <div className="cursor-pointer">
           <AiOutlineMail />
         </div>
-        <BsInstagram />
-        <BsWhatsapp />
+
+        <div className="cursor-pointer">
+          <BsInstagram />
+        </div>
+
+        <div className="cursor-pointer">
+          <BsWhatsapp />
+        </div>
       </div>
     </div>
   );
