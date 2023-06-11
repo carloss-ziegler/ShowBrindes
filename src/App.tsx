@@ -26,15 +26,16 @@ function App() {
     <div className="relative flex flex-col">
       <Header />
       <FirstSection />
-      <div id="products">
-        <ProductsCatalog />
+      <div id="benefits">
+        <OurBenefits />
       </div>
       <div id="aboutUs">
         <AboutUs />
       </div>
-      <div id="benefits">
-        <OurBenefits />
+      <div id="products">
+        <ProductsCatalog />
       </div>
+
       <Contact />
       <Footer />
     </div>

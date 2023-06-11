@@ -1,62 +1,47 @@
 import React from "react";
-import { motion } from "framer-motion";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import SliderItem from "./components/SliderItem";
+import Image2 from "../../assets/2.png";
+import Image3 from "../../assets/3.png";
+import Image4 from "../../assets/4.png";
 
 function FirstSection() {
   return (
-    <div className="bg-[#f2f1f6] h-[100vh] flex w-full justify-center">
-      <div className="flex flex-1 max-w-6xl items-center justify-center gap-1">
-        <motion.div
-          initial={{
-            x: -200,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 1,
-            delay: 0.5,
-          }}
-          className="flex-1"
-        >
-          <h1 className="text-5xl font-poppins font-medium text-black">
-            Dê um toque de
-            <br />
-            personalidade ao
-            <br />
-            seu dia!
-          </h1>
-          <p className="text-2xl font-regular font-poppins text-[#252525]">
-            Brindes personalizados que
-            <br />
-            fazem a diferença!
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{
-            x: 100,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 1.3,
-          }}
-          className="flex-1 bg-[#999999] h-[600px] w-[600px] flex items-center justify-center"
-        >
-          img
-        </motion.div>
-      </div>
+    <div className="bg-[#f2f1f6] flex w-full justify-center">
+      <Swiper
+        modules={[Autoplay, Pagination, Navigation]}
+        spaceBetween={50}
+        slidesPerView={1}
+        loop={true}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 2000,
+        }}
+      >
+        {/* <SwiperSlide>
+          <SliderItem text="Procurando por um diferencial? Aqui você acha brindes personalizados que fazem a diferença!" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <SliderItem text="Diversas opções de brindes para sua logo brilhar!" />
+        </SwiperSlide> */}
+        <SwiperSlide>
+          <SliderItem image={Image2} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <SliderItem image={Image3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <SliderItem image={Image4} />
+        </SwiperSlide>
+        {/* <SwiperSlide>
+          <SliderItem text="Faça sua marca ser memorável, personalize!" />
+        </SwiperSlide> */}
+      </Swiper>
     </div>
   );
 }

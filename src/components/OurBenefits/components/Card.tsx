@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 interface ICardProps {
   title: string;
   subtitle: string;
@@ -22,15 +21,15 @@ function Card({ subtitle, title, delay }: ICardProps) {
         duration: 0.8,
         delay,
       }}
-      className="h-60 w-60 rounded-lg bg-gradient-to-b from-[#f89809] to-[#EFA74D] flex flex-col items-center justify-between p-3 text-center"
+      className="h-80 w-80 rounded-2xl flex flex-col items-center bg-gradient-to-b from-[#f89809] to-[#EFA74D] relative justify-center p-3 text-center"
     >
-      <h1 className="text-white font-poppins text-xl font-semibold">{title}</h1>
+      <h1 className="text-white font-poppins text-xl font-semibold absolute top-4">
+        {title}
+      </h1>
 
       <p className="text-[#eee] font-poppins text-md font-regular">
         {subtitle}
       </p>
-
-      <div className="h-20 w-20 bg-gray-500 rounded"></div>
     </motion.div>
   );
 }

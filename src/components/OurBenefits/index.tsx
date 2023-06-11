@@ -3,31 +3,26 @@ import Card from "./components/Card";
 
 function OurBenefits() {
   return (
-    <div className="bg-[#252525] h-[100vh] flex flex-col items-center w-full py-6 justify-between">
-      <h1 className="text-4xl text-white font-poppins font-semibold">
+    <div className="bg-[#252525] h-[100vh] flex flex-col items-center justify-center w-full py-6 relative">
+      <h1 className="text-4xl text-white font-poppins font-semibold absolute top-8">
         Nossos Benefícios
       </h1>
 
-      <div className="grid grid-cols-2 gap-7">
+      <div className="flex gap-7 items-center justify-center">
         <Card
           delay={0.2}
-          title="Personalização"
-          subtitle="Oferecemos a possibilidade de personalização de brindes e acessórios para você"
+          title="Benefício"
+          subtitle="Os cheirinhos são ótimos para fidelizar seus clientes. No setor de limpeza automotivo, se o cheiro acabou, significa que está na hora de voltar, enquanto em outras áreas é um lembrete diário da sua marca!"
         />
         <Card
           delay={0.4}
-          title="Qualidade"
-          subtitle="Todos os nossos produtos são feitos com materiais de alta qualidade"
+          title="Memórias Olfativas"
+          subtitle="Sabe aquele cheiro que te faz lembrar de algum momento especial? Isso acontece porque temos uma incrível capacidade de associar cheiros a memórias no cérebro, ou seja, o cheirinho pode criar laços afetivos entre cliente e marca!"
         />
         <Card
           delay={0.6}
-          title="Entrega"
-          subtitle="Entregamos nossos produtos, garantindo que eles cheguem rapidamente e em perfeito estado"
-        />
-        <Card
-          delay={0.8}
-          title="Atendimento"
-          subtitle="Oferecemos o melhor atendimento e ajudamos você a escolher os melhores produtos"
+          title="Corte"
+          subtitle="Além dos vários modelos que possuímos, nós ainda temos a opção de corte exclusivo, tudo para sua logo rodar por aí da melhor forma possível."
         />
       </div>
     </div>
